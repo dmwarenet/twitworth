@@ -1,6 +1,8 @@
 Twitworth
 ========
 
+![My image](https://raw.github.com/dipankar/twitworth/master/static/images/twitworth_logo.gif)
+
 This was a small side-project done with web.py and Postgres a couple of years back. 
 It used the older HTTP Authentication based twitter API, and would calculate your social worth in dollars ;).
 
