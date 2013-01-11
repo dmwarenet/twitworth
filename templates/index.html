@@ -1,0 +1,51 @@
+$def with (hello, level_one, level_two, total)
+<html>
+<head>
+<title>Twitworth - your twitter ad worth</title>
+<link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
+<!--[if IE]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+</head>
+<body style='background:#78251B'>
+<div class="container">
+<div class="span-4">&nbsp;</div>
+<div class="span-16" style='text-align:center;background:#FFFFFF'>
+<div class="span-1">&nbsp;</div>
+<div class="span-14">
+<hr class="space">
+<img src="/static/images/twitworth_logo.gif"/>
+<hr class="space">
+<p>Estimate your twitter worth. Embed your worth in your blog. Sell yourself to your advertisers.</p>
+<p><b>We have an API as well:</b><br>
+http://twitworth.com/getworth?username=[username]<br>
+This will return a comma-seperated list of level1 users, level2 users and your twitter value<br>
+</p>
+<hr class="space">
+<form id="giveurl" action="/" method=POST> 
+Twitter username : <input type="text" name="username" /><br/>
+Twitter password : <input type="password" name="password" /><br/>
+Value per user  (dollar) : <input type="text" name="cost" value = "0.50"/>
+<input type="submit" value="tell me" /><br />
+</form>
+<hr class="space">
+Please be patient while we call the slow twitter API ;) for your data. If you have a lot of followers it will take a bit of time.
+$if hello == "1":
+    <hr class="space">
+    <div class="success"> Level one users : $level_one<br/>
+    Level two users : $level_two<br/>
+    What are you worth? (dollars): $total</div>
+
+$if hello == "2":
+    <hr class="space">
+    <div class="error">Think twitter is down or your password is wrong.. sorry ... try later</div>
+
+<hr class="space">
+We have a new auction for advertisers and users coming up, so stay tuned.
+<hr class="space">
+(c)2008 <a href="http://dipankar.name">Dipankar Sarkar</a> - Contact at {me [at] dipankar.name}
+<hr class="space">
+</div>
+</div>
+</div>
+</body>
+</html>
